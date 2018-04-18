@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+  compileSdkVersion 27
+  lintOptions {
+    abortOnError false
+  }
+  defaultConfig {
+    minSdkVersion 14
+    targetSdkVersion 27
+    versionCode 1
+    versionName "1.0"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+  tasks.whenTaskAdded { task ->
+    if (task.name.contains("UnitTest") || task.name.contains("AndroidTest")) {
+      task.enabled = false
+    }
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+publish {
+  userOrg = 'batuer'
+  groupId = 'com.gusi'
+  artifactId = 'LoadingDialog'
+  publishVersion = '1.0.0'
+  desc = 'This is an Android library. Used to display the load'
+  website = 'https://github.com/batuer/LoadingDialog'
+}
