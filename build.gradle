@@ -10,7 +10,7 @@ buildscript {
   dependencies {
     classpath 'com.android.tools.build:gradle:3.1.0'
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    classpath 'com.novoda:bintray-release:0.7.0'
+    classpath 'com.novoda:bintray-release:0.8.1'
 
     // NOTE: Do not place your application dependencies here; they belong
     // in the individual module build.gradle files
@@ -21,12 +21,18 @@ allprojects {
   repositories {
     google()
     jcenter()
+    maven{url "https://jitpack.io"}
+    maven{url "https://maven.google.com"}
     mavenCentral()
   }
   //加上这些
   tasks.withType(Javadoc) {
-    options.addStringOption('Xdoclint:none', '-quiet')
-    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('Xdoclint:none', '-quiet') //忽略javadoc错误
+    options{
+      encoding "UTF-8"
+      charSet 'UTF-8'
+      links "http://docs.oracle.com/javase/7/docs/api"
+    }
   }
 }
 

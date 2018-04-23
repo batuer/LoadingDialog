@@ -32,8 +32,9 @@ dependencies {
 publish {
   userOrg = 'batuer'
   groupId = 'com.gusi'
-  artifactId = 'LoadingDialog'
+  artifactId = 'loadingdialog'
   publishVersion = '1.0.0'
-  desc = 'This is an Android library. Used to display the load'
+  desc = 'This is an Android library. Used to display the loading.'
   website = 'https://github.com/batuer/LoadingDialog'
+  licences = ['Apache-2.0']
 }

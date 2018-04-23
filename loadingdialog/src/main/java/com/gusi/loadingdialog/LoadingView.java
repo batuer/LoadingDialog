@@ -13,7 +13,6 @@ import android.view.animation.LinearInterpolator;
 
 /**
  * @author ylw   2016-09-21
- * @Des 用于显示 Loading 的 {@link View}，支持颜色和大小的设置。
  */
 public class LoadingView extends View {
 

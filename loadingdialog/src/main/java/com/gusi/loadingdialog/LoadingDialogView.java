@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
 /**
- * @Author ylw  2018-04-18 12:07
+ * @author ylw  2018-04-18
  */
 public class LoadingDialogView extends LinearLayout {
   public LoadingDialogView(Context context, AttributeSet attrs) {
