@@ -21,5 +21,6 @@
       android:layout_marginTop="10dp"
       android:gravity="center_horizontal"
       android:maxLines="1"
-      android:textColor="@android:color/white" />
+      android:textColor="@android:color/white"
+      android:textSize="13sp" />
 </com.gusi.loadingdialog.LoadingDialogView>
