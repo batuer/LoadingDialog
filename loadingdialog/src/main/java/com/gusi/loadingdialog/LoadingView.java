@@ -7,7 +7,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 
@@ -119,7 +118,6 @@ public class LoadingView extends View {
 
   @Override protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
     setMeasuredDimension(mSize, mSize);
-    Log.w("Fire", "LoadingView:127行:" + getMeasuredWidth() + ":" + getWidth());
   }
 
   @Override protected void onDraw(Canvas canvas) {
